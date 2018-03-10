@@ -1,0 +1,43 @@
+section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.student_info{
+  background-color: #DEE3E0;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+table, td {
+   border: 1px solid black;
+}
+table{
+  border-collapse: collapse;
+}
+#thumb_nail{
+  max-width: 100px;
+  max-height: 100px;
+  width: 50%;
+  border-radius: 50%;
+  }
+.content_box{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.tag_box{
+  font-weight: bold;
+  text-align: right;
+  margin-right: 20px;
+}
+.info_box{
+  text-align: left;
+}
+.tag_box div, .info_box div{
+    margin-bottom: 15px;
+}
+.course_box div{
+  margin-bottom: 0;
+}

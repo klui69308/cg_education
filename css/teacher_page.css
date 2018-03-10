@@ -29,3 +29,8 @@ table{
   width: 70%;
   text-align: center;
 }
+.course_title, .course, .rating, .gpa{
+  margin-top: 10px;
+  height: 40px;
+  text-align: center;
+}
