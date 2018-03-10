@@ -36,35 +36,7 @@ border-width: thin;
   border-width: medium;
   border-style: solid;
 }
-
-section{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.student_info{
-  background-color: #DEE3E0;
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-table, td {
-   border: 1px solid black;
-}
-table{
-  border-collapse: collapse;
-}
-.name_box{
-  display: flex;
-  justify-content: space-around;
-}
-#thumb_nail{
-  max-width: 100px;
-  max-height: 100px;
-  width: 50%;
-  border-radius: 50%;
-  }
-.name_and_major{
-  width: 70%;
-  text-align: center;
+a{
+  color: black;
+  text-decoration: none;
 }
