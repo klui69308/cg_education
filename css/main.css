@@ -1,0 +1,37 @@
+#top_line{
+background-color: #EAEAEA;
+border-color: #EAEAEA;
+border-width: thin;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.big_title{
+  font-size: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.small_title{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav_item{
+  margin-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  height: 20px;
+}
+#item1, #item2{
+  border-right: #EAEAEA solid;
+}
+#item1{
+  color: #47BF87;
+  text-decoration: underline;
+}
+#bottom_line{
+  background-color: black;
+  border-color: black;
+  border-width: medium;
+}
