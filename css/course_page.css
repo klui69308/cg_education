@@ -1,0 +1,43 @@
+#item3{
+  color: #47BF87;
+  text-decoration: underline;
+}
+section{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.teacher_info{
+  background-color: #DEE3E0;
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  width: 40%;
+  border: #767877 solid;
+}
+.subject{
+  width: 180px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-right: #767877 solid;
+}
+.teacher_info_box{
+  display: flex;
+  justify-content: center;
+}
+.info_box, .info_tag{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.info_tag{
+  margin-left: 50px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.info_box{
+  margin-right: 50px;
+}
