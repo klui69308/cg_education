@@ -5,7 +5,8 @@ section{
 }
 .student_info{
   margin-bottom: 20px;
-  flex-basis: 33%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 table, td {
    border: 1px solid black;
@@ -40,4 +41,3 @@ table{
   height: 40px;
   text-align: center;
 }
-@media screen and (max-width: 500px){
