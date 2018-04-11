@@ -1,23 +1,37 @@
 var teacher_name = "Sally Jones",
     department_name = "Physics",
-    rating = [3.4, 5.0, 4.2],
-    sum_rating = 0,
-    ave_rating;
+    rating1 = 3.4,
+    rating2 = 5.0,
+    rating3 = 4.2,
+    teacher_ratings = [rating1, rating2, rating3];
 
-function round(value, decimals) {
-  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+function addTeacherRating (ratings, newRating) {
+  ratings[ratings.length] = newRating;
+  return ratings;
 }
 
-for (i = 0; i < rating.length; i++) {
-  sum_rating = sum_rating + rating[i];
+function getRatingAvg (ratings) {
+  var sumRatings = 0,
+      avgRating;
+
+  for (var i = 0; i < ratings.length; i++) {
+    sumRatings += ratings[i];
+  }
+
+  avgRating = sumRatings / (ratings.length);
+
+  return Math.round(avgRating * 10) / 10;
 }
 
-ave_rating = sum_rating / (rating.length)
+function getInput () {
+  var input = window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?");
+  while (input < 0 || input > 5.1) {
+      alert("Please enter a rating between 0.0 - 5.0?");
+      input = window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?");
+  }
+  input = Number(input);
+  return input;
+}
 
-
-console.log("Teacher: " + teacher_name);
-console.log("Department: " + department_name);
-console.log("Ratings: " + rating[0].toFixed(1)
-            + ", " + rating[1].toFixed(1)
-            + ", " + rating[2]);
-console.log("Ave Rating: " + round(ave_rating, 1));
+addTeacherRating(teacher_ratings, getInput());
+alert("Thanks for you review! " +  teacher_name + "'s average rating is now " + getRatingAvg(teacher_ratings) + ".");
