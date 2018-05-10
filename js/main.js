@@ -1,9 +1,10 @@
-var teacher_name = "Sally Jones",
-    department_name = "Physics",
-    rating1 = 3.4,
-    rating2 = 5.0,
-    rating3 = 4.2,
-    teacher_ratings = [rating1, rating2, rating3];
+var teacher = {
+  name: "Sally Jones",
+  department: "Physics",
+  ratings: [3.4, 5.0, 4.2]
+};
+
+
 
 function addTeacherRating (ratings, newRating) {
   ratings[ratings.length] = newRating;
@@ -33,5 +34,5 @@ function getInput () {
   return input;
 }
 
-addTeacherRating(teacher_ratings, getInput());
-alert("Thanks for you review! " +  teacher_name + "'s average rating is now " + getRatingAvg(teacher_ratings) + ".");
+addTeacherRating(teacher.ratings, getInput());
+alert("Thanks for you review! " +  teacher.name + "'s average rating is now " + getRatingAvg(teacher.ratings) + ".");

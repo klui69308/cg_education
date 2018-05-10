@@ -2,7 +2,11 @@
 var courseArr = [ ["Math", "Math and Science"],
                    ["Chemistry", "Math and Science"],
                    ["Physcis", "Math and Science"],
-                   ["English", "Humanity"]
+                   ["English", "Humanity"],
+                   ["JavaScript", "Computer Science"],
+                   ["HTML", "Computer Science"],
+                   ["CSS", "Computer Science"],
+                   ["Painting", "Fine Art"],
                  ];
 
 function departmentNameArr (courseArr) {
@@ -33,7 +37,7 @@ function getInput (departmentName) {
        bool = false;
      }
    }
-   // loop until meet expectation 
+   // loop until meet expectation
    while (bool == false) {
        alert("Please enter a valid department name: ");
        alert(departmentName)
@@ -54,7 +58,6 @@ function getInput (departmentName) {
 function arrByDepartment (arr, targetedDepartment) {
   var newArr = [];
   for (var i = 0; i < arr.length; i++) {
-
     var j = arr[i].length - 1;
       if (arr[i][j] == targetedDepartment) {
         newArr.push(arr[i]);
