@@ -1,6 +1,60 @@
+// Student prototype
+var Student = function(name, major, gpa, course, gradMonth, gradYear) {
+  this.name = name.split(" ");
+  this.firstName = this.name[0].toLowerCase();
+  this.lastName = this.name[this.name.length -1].toLowerCase();
+  this.major = major;
+  this.gradMonth = gradMonth;
+  this.gradYear = gradYear;
+  this.email = this.firstName + "." + this.lastName + "@email.edu";
+  this.avgGPA = gpa;
+  this.course = course;
+}
 
-function gradDate (month, year) {
-    return month + " " + year;
+var student1 = new Student ("John Smith", "Physics", 4.0, ["Physics 101", "Calculus"], "May", 2019),
+    student2 = new Student ("Adam Lee Roy", "Chemistry", 4.0, ["Chemistry 101", "English 101"], "December", 2020),
+    student3 = new Student ("Sophia Erica Lui", "Computer Science", 4.0, ["JavaScript", "HTML", "CSS"], "May", 2023);
+
+//addCourse function
+Student.prototype.addCourse = function (newCourse) {
+  this.course.push (newCourse);
+}
+//dropCourse function
+Student.prototype.dropCourse = function (dropCourse) {
+  for (var i = 0; i < this.course.length; i++) {
+    if (this.course[i] == dropCourse) {
+      var indexToRemoved = this.course.indexOf(dropCourse);
+      this.course.splice (indexToRemoved, 1);
+    }
+  }
+}
+//changeMajor function
+Student.prototype.changeMajor  = function (newMajor) {
+  this.major = newMajor;
+}
+
+//prompt user about add or drop or change major
+var action = window.prompt("Add, Drop, or change major: ");
+
+action = action.toLowerCase();
+
+//storing the variables of action
+var newCourse,
+    dropCourse,
+    changeMajor;
+
+switch (action) {
+  case "add":
+    newCourse = window.prompt("What class would you like to add?");
+    break;
+  case "drop":
+    dropCourse = window.prompt("What class would you like to drop?");
+    break;
+  case "change major":
+    changeMajor = window.prompt("What is your new major?");
+    break;
+  default:
+    alert ("Nothing will change!!!");
 }
 
 function welcomeStudentsByGraduatingClass (gradYear, gradMonth, welcomeMessage) {

@@ -1,9 +1,9 @@
-var teacher = {
-  name: "Sally Jones",
-  department: "Physics",
-  ratings: [3.4, 5.0, 4.2]
-};
-
+var Teacher = function (name, department, ratings){
+  this.name = name;
+  this.department = department;
+  this.ratings = ratings;
+}
+var teacher1 = new Teacher ("Sally Jones", "Physics", [3.4, 5.0, 4.2]);
 
 
 function addTeacherRating (ratings, newRating) {
@@ -34,5 +34,5 @@ function getInput () {
   return input;
 }
 
-addTeacherRating(teacher.ratings, getInput());
-alert("Thanks for you review! " +  teacher.name + "'s average rating is now " + getRatingAvg(teacher.ratings) + ".");
+addTeacherRating(teacher1.ratings, getInput());
+alert("Thanks for you review! " +  teacher1.name + "'s average rating is now " + getRatingAvg(teacher1.ratings) + ".");

@@ -1,13 +1,30 @@
 //all the course names and department names
-var courseArr = [ ["Math", "Math and Science"],
-                   ["Chemistry", "Math and Science"],
-                   ["Physcis", "Math and Science"],
-                   ["English", "Humanity"],
-                   ["JavaScript", "Computer Science"],
-                   ["HTML", "Computer Science"],
-                   ["CSS", "Computer Science"],
-                   ["Painting", "Fine Art"],
-                 ];
+var Course = function (name, department, teacher, semester){
+  this.name = name;
+  this.department = department;
+  this.teacher = teacher;
+  this.semester = semester;
+};
+
+var numberOfCourse = 8,
+    course1 = new Course ("Math", "Math and Science", "Sally Jones", "Fall"),
+    course2 = new Course ("Chemistry", "Math and Science", "Sally Jones", "Fall"),
+    course3 = new Course ("Physcis", "Math and Science", "Sally Jones", "Fall"),
+    course4 = new Course ("English", "Humanity", "Sally Jones", "Fall"),
+    course5 = new Course ("JavaScript", "Computer Science", "Sally Jones", "Fall"),
+    course6 = new Course ("HTML", "Computer Science", "Sally Jones", "Fall"),
+    course7 = new Course ("CSS", "Computer Science", "Sally Jones", "Fall"),
+    course8 = new Course ("Painting", "Fine Art", "Sally Jones", "Fall");
+
+var courseArr = [ [course1.name, course1.department],
+                  [course2.name, course2.department],
+                  [course3.name, course3.department],
+                  [course4.name, course4.department],
+                  [course5.name, course5.department],
+                  [course6.name, course6.department],
+                  [course7.name, course7.department],
+                  [course8.name, course8.department]
+               ];
 
 function departmentNameArr (courseArr) {
   var departmentName = [];
